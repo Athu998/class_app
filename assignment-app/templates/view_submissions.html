@@ -1,0 +1,9 @@
+<h2>Submissions</h2>
+{% for a in assignments %}
+  <h3>{{ a.title }}</h3>
+  <ul>
+    {% for s in a.submission_set %}
+      <li>{{ s.content }}</li>
+    {% endfor %}
+  </ul>
+{% endfor %}

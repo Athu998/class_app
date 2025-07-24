@@ -1,0 +1,11 @@
+<h2>Submit Assignment</h2>
+<form method="POST">
+  Select Assignment:
+  <select name="assignment_id">
+    {% for a in assignments %}
+      <option value="{{ a.id }}">{{ a.title }}</option>
+    {% endfor %}
+  </select><br>
+  Content: <textarea name="content"></textarea><br>
+  <button type="submit">Submit</button>
+</form>
